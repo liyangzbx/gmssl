@@ -6,6 +6,7 @@ GmSSL是一个开源的加密包的python实现，支持SM2/SM3/SM4等国密(国
 SM2算法
 
 1. 生成随机SM2密钥
+``` python
 from gmssl import sm2, func
 sm2_crypt = sm2.CryptSM2(private_key="", public_key="")
 # 产生私钥
@@ -15,7 +16,7 @@ k = int(pri_key, 16)
 pub_key = sm2_crypt._kg(k, sm2_crypt.ecc_table['g'])
 pubX = pub_key[0:64].upper()
 pubY = pub_key[64:len(pub_key)].upper()
-
+```
 
 2. encrypt #数据和加密后数据为hex类型
 plaintext = "31"
