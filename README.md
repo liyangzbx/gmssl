@@ -18,8 +18,9 @@ pubX = pub_key[0:64].upper()
 pubY = pub_key[64:len(pub_key)].upper()
 ```
 
-### 2. encrypt #数据和加密后数据为hex类型
+### 2. encrypt 
 ``` python
+#数据和加密后数据为hex类型 ,后述均为hex
 plaintext = "31"
 sm2_crypt = sm2.CryptSM2(private_key="", public_key=public_key)
 enc_data = sm2_crypt.encrypt(bytes.fromhex(plaintext))
